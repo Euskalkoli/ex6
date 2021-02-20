@@ -1,0 +1,73 @@
+	p.outset {border-style: outset;}
+           
+            body {
+                background-color: rgb(176, 255, 192);
+            }
+            
+            table {
+                width: 100%;
+                background-color:gray;
+            }
+            
+            h1 {
+            	margin-left: 20px;
+                font-family: "Lucida Handwriting";
+                font-size: 50px;
+                
+            }
+            
+            p {
+            
+            font-size: 18px;
+            
+            }
+            
+            #para1 {
+            
+            	text-align: center;
+  				color: #2E2E2E;
+                font-family: "Lucida Handwriting";
+                
+            }
+            
+            #para2 {
+            
+            	text-align: center;
+  				color: #2E2E2E;
+                font-family: "Lucida Handwriting";
+            }
+            
+            #para3 {
+            
+            	text-align: center;
+  				color: #2E2E2E;
+                font-family: "Lucida Handwriting";
+            }
+            
+            #para4 {
+            
+            	text-align: center;
+  				color: #2E2E2E;
+                font-family: "Lucida Handwriting";
+            }
+            
+            #para5 {
+            
+            	text-align: center;
+  				color: #2E2E2E;
+            
+            }
+            
+            #PD {
+             	
+                margin-left: 20px;
+                font-size: 15px;
+            
+            }
+            
+            div {
+ 				background-color: rgb(255, 218, 160);
+                border-style: outset;
+                border-radius: 10px;
+                
+			}

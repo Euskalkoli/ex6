@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   <link rel="stylesheet" href="ex6.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            
+   </head>
+   <body>
+   
+    <script>
+    
+    function myFunction() {
+ 	 var x = document.getElementById("myBtn").form.id;
+ 	 document.getElementById("demo").innerHTML = x;
+	}
+    
+    //----------------------------------------------------
+    
+    
+    document.addEventListener('DOMContentLoaded', () => {
+    
+      const SPAN_FIBO = document.querySelector('span#fibo');
+    
+      function fibonacci(numero) {
+      
+          let fibo=[0,1];
+          let RES=[];
+          for (let i = 2; i < numero; i++) {
+              fibo[i] = fibo[i - 2] + fibo[i - 1];
+          }
+          
+          SPAN_FIBO.textContent = fibo;
+      }
+    
+     fibonacci(20);
+   });
+    
+   //----------------------------------------------------------------------------------------
+   
+    
+    document.addEventListener('DOMContentLoaded', () => { 
+
+      const target = new Date('06/01/2021 0:01 AM');
+        
+      const SPAN_DAYS = document.querySelector('span#graduation-counter');
+        
+      const ms_of_s = 1000;
+      const ms_of_m = ms_of_s * 60;
+      const ms_of_h = ms_of_m * 60;
+      const ms_of_d = ms_of_h * 24
+
+      function updateCountdown() {
+        
+          const now = new Date()
+          const duration = target - now;
+          const days_left = Math.floor(duration / ms_of_d);
+          
+          SPAN_DAYS.textContent = days_left;
+          
+      }
+        
+         updateCountdown();
+    });
+    
+    //----------------------------------------------------------------------------------------
+    
+    
+    function bmiCalculator() {
+    
+		var form = document.getElementById("form");
+
+		var kg = +form.kg.value;    
+		var m = +form.m.value;  
+		var cm = +form.cm.value;
+
+		var height = (m*100 + cm)/100;    
+		var imc = kg / (height * height);    
+		form.imc.value = imc.toFixed(2);
+	}
+    
+     //----------------------------------------------------------------------------------------
+     
+     
+     document.addEventListener('DOMContentLoaded', () => { 
+     
+     const SPAN_HIPHOP = document.querySelector('span#hiphop');
+     
+     	function hipHopLoader() {
+     
+     		var a, b;
+			var i1 = document.getElementById("input1").value;  
+			var i2 = document.getElementById("input2").value; 
+             
+       		a = Number(a);
+       		b = Number(b);
+        
+       		if (i1 > i2) {
+        		a = i2;
+           		b = i1;
+          	}
+        
+        	else if (i2 > i1) {
+        		a = i1;
+            	b = i2;
+        	}
+        
+        	else {
+            	a = 0;
+            	b = 0;
+        	}
+         
+        	var i;
+        	let array = [];
+         
+        	for (i = a; i < b; i++) {
+ 		 
+         		if (i % 3 == 0 && i % 7 == 0) {
+         			array.push("hiphop"); 
+         		}
+         
+         		else if (i % 3 == 0) {
+         			array.push("hip"); 
+         		}
+         
+         		else if (i % 7 == 0) {
+         			array.push("hop"); 
+         		}
+         
+         		else {
+         			array.push(i); 
+         		}
+         
+			}
+        
+        	SPAN_HIPHOP.textContent = array;
+        
+    	}
+        
+        hipHopLoader();
+        
+    });
+    
+    
+    </script>
+    
+    <section>
+   
+	<h1>~ ex6 by Gorka Pradas ~</h1>
+   
+      <div id="fibo">
+      <p id="para1", class="dotted">
+      		<b>Fibonacci's first 20 numbers:</b> <span id="fibo"></span>
+      </p>
+      </div>
+      
+      
+      <div id="graduation-counter">
+      <p id="para2", class="dotted">
+      		I should leave TAMK in <b><span id="graduation-counter"></span></b> days. 
+        </p>
+      </div>
+      
+      <div id="bmi-calculator">
+       <p id="para3"> This tool is used to calculate your <b>IMC!</b></p> 
+       
+      <form id="form">
+        <fieldset>
+            <p id="para3"><legend>So, calculate yours!</legend></p>
+
+            <p id="para5"><label for="kg"><b>Mass (Kg):</b></label>
+            <input type="text" name="kg"/>          
+
+            <label for="m"><b>Height (m):</b></label>
+            <input type="text" name="m"/>
+
+            <label for="cm"><b>Height (cm):</b></label>
+            <input type="text" name="cm"/>
+
+            <label for="imc"><b>IMC:</b></label>
+            <input type="text" name="imc" disabled="disabled"/></p>
+            
+            <p id="para3"><button id="myBtn" type="button" onclick="bmiCalculator()">Calculate</button></p>
+            
+            </fieldset>
+        </form>
+      
+      </div>
+      
+      <div id="hiphop">
+      
+      <p id="para4">Please input two numbers between 1 and 1000:</p>
+
+		<p id="para5">Input 1: <input id="input1" type="text">
+        Input 2: <input id="input2" type="text">
+        
+		<button type="button" onclick="hipHopLoader()">Values set</button>
+		<span id="hiphop"></span></p>
+        <p id="PD">PD: I please ask about a more detailed comment about this exercise because I couldn't reach it and I actually don't know why.</p>
+      
+      </div> 
+      
+    </section>
+      
+   </body>
+</html>
